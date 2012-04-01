@@ -1,0 +1,21 @@
+Configuration files for setting up nginx, Gunicorn, and Supervisor
+
+Installation:
+
+Edit each file changing paths to your django app
+
+create a sym link for nginx
+ln -s $PWD/nginx.conf /etc/nginx/conf.d/{project_name}.conf
+
+do the same for supervisor
+ln -s $PWD/supervisor.conf /etc/supervisor/conf.d/{project_name}.conf
+
+restart nginx and supervisor
+service nginx restart
+service supervisor restart
+
+check that supervisor is running your app
+supervisorctl status
+
+you should get output similar to
+{project_name}                          RUNNING    pid 827, uptime 0:12:29
