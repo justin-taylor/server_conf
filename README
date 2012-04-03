@@ -19,3 +19,9 @@ supervisorctl status
 
 you should get output similar to
 {project_name}                          RUNNING    pid 827, uptime 0:12:29
+
+if you don't see this output try restarting your server
+
+
+TODO:
+write shell script to install config files automatically
